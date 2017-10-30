@@ -3,4 +3,4 @@ class Team < ApplicationRecord
   has_many :talks
   has_many :channels
   validates_presence_of :slug, :user
-end
+enddc 
