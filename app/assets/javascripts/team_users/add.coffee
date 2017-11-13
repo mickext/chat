@@ -18,6 +18,7 @@ $(document).on 'turbolinks:load', ->
           window.add(data['user']['name'], data['user']['id'], 'user')
           Materialize.toast('Success in add User &nbsp;<b>:(</b>', 4000, 'green')
         error: (jqXHR, textStatus, errorThrown) ->
+          console.log('Error', jqXHR)
           Materialize.toast('Problem in add User &nbsp;<b>:(</b>', 4000, 'red')
 
 

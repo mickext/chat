@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'teams#index'
+  mount ActionCable.server => '/cable'
   resources :teams, only: [:create, :destroy]
   get '/:slug', to: 'teams#show'
   resources :channels, only: [:show, :create, :destroy]
